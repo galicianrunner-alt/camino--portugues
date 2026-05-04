@@ -6,96 +6,83 @@
 <title>O Porriño · Castro da Troña</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { background:#0d0a05; color:#f0e6c8; font-family:'Crimson Text',Georgia,serif; min-height:100vh; }
-.header { padding:1.5rem; background:rgba(40,20,10,0.4); border-bottom:1px solid rgba(201,147,58,0.2); }
-.back { display:inline-block; color:#c9933a; font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.1em; text-decoration:none; margin-bottom:1rem; }
-.tag { font-size:0.75rem; letter-spacing:0.25em; color:#c9933a; font-family:'Cinzel',serif; margin-bottom:0.4rem; }
-h1 { font-family:'Cinzel',serif; font-size:1.5rem; color:#f0e6c8; }
-.body { padding:1.5rem; }
-.leyenda { font-size:1.05rem; line-height:1.9; color:#d4c49a; font-style:italic; margin-bottom:1.5rem; border-left:2px solid #c9933a; padding-left:1rem; }
-.texto { font-size:1rem; line-height:1.8; color:#f0e6c8; margin-bottom:2rem; }
-.reto { background:rgba(240,230,200,0.05); border:1px solid rgba(201,147,58,0.3); border-radius:6px; padding:1.2rem; margin-bottom:1rem; }
-.reto-tipo { font-family:'Cinzel',serif; font-size:0.7rem; letter-spacing:0.3em; color:#c9933a; margin-bottom:0.8rem; }
-.reto-pregunta { font-size:1rem; line-height:1.6; margin-bottom:1rem; }
-.opcion { display:block; width:100%; background:rgba(240,230,200,0.05); border:1px solid rgba(201,147,58,0.25); color:#f0e6c8; padding:0.8rem 1rem; font-family:'Crimson Text',serif; font-size:1rem; cursor:pointer; border-radius:4px; text-align:left; margin-bottom:0.5rem; line-height:1.4; text-decoration:none; }
-.opcion.ok { background:rgba(74,103,65,0.4); border-color:#6a9760; color:#b8dbb0; }
-.opcion.mal { background:rgba(139,32,32,0.3); border-color:#8b2020; color:#e89090; }
-.fb { margin-top:0.8rem; padding:0.8rem; border-radius:4px; font-size:0.95rem; line-height:1.6; display:none; }
-.fb.ok { background:rgba(74,103,65,0.2); border:1px solid rgba(106,151,96,0.4); color:#b8dbb0; }
-.fb.mal { background:rgba(139,32,32,0.15); border:1px solid rgba(139,32,32,0.4); color:#e89090; }
-.foto-zona { border:2px dashed rgba(201,147,58,0.4); border-radius:6px; padding:1.5rem; text-align:center; margin-bottom:1rem; cursor:pointer; }
-.foto-zona p { font-size:0.9rem; color:#8899aa; margin-top:0.5rem; }
-.foto-prev { width:100%; border-radius:6px; margin-top:1rem; display:none; }
-.btn-completar { display:block; width:100%; background:linear-gradient(135deg,#c9933a,#a07020); color:#1a1208; border:none; padding:1rem; font-family:'Cinzel',serif; font-size:1rem; font-weight:600; letter-spacing:0.15em; cursor:pointer; border-radius:4px; text-align:center; text-decoration:none; margin-top:1.5rem; }
-.espacio { height:4rem; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0d0a05;color:#f0e6c8;font-family:'Crimson Text',Georgia,serif;min-height:100vh;}
+.header{padding:1.5rem;background:rgba(40,20,10,0.4);border-bottom:1px solid rgba(201,147,58,0.2);}
+.back{display:inline-block;color:#c9933a;font-family:'Cinzel',serif;font-size:0.8rem;letter-spacing:0.1em;text-decoration:none;margin-bottom:1rem;}
+.tag{font-size:0.75rem;letter-spacing:0.25em;color:#c9933a;font-family:'Cinzel',serif;margin-bottom:0.4rem;}
+h1{font-family:'Cinzel',serif;font-size:1.5rem;color:#f0e6c8;}
+.body{padding:1.5rem;}
+.leyenda{font-size:1.05rem;line-height:1.9;color:#d4c49a;font-style:italic;margin-bottom:1.5rem;border-left:2px solid #c9933a;padding-left:1rem;}
+.texto{font-size:1rem;line-height:1.8;color:#f0e6c8;margin-bottom:2rem;}
+.reto{background:rgba(240,230,200,0.05);border:1px solid rgba(201,147,58,0.3);border-radius:6px;padding:1.2rem;margin-bottom:1rem;}
+.reto-tipo{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.3em;color:#c9933a;margin-bottom:0.8rem;}
+.reto-pregunta{font-size:1rem;line-height:1.6;margin-bottom:1rem;}
+.opcion{display:block;width:100%;background:rgba(240,230,200,0.05);border:1px solid rgba(201,147,58,0.25);color:#f0e6c8;padding:0.8rem 1rem;font-family:'Crimson Text',serif;font-size:1rem;cursor:pointer;border-radius:4px;text-align:left;margin-bottom:0.5rem;line-height:1.4;}
+.opcion.ok{background:rgba(74,103,65,0.4);border-color:#6a9760;color:#b8dbb0;}
+.opcion.mal{background:rgba(139,32,32,0.3);border-color:#8b2020;color:#e89090;}
+.fb{margin-top:0.8rem;padding:0.8rem;border-radius:4px;font-size:0.95rem;line-height:1.6;display:none;}
+.fb.ok{background:rgba(74,103,65,0.2);border:1px solid rgba(106,151,96,0.4);color:#b8dbb0;}
+.fb.mal{background:rgba(139,32,32,0.15);border:1px solid rgba(139,32,32,0.4);color:#e89090;}
+.foto-zona{border:2px dashed rgba(201,147,58,0.4);border-radius:6px;padding:1.5rem;text-align:center;margin-bottom:1rem;cursor:pointer;}
+.foto-zona p{font-size:0.9rem;color:#8899aa;margin-top:0.5rem;}
+.foto-prev{width:100%;border-radius:6px;margin-top:1rem;display:none;}
+.btn{display:block;width:100%;background:linear-gradient(135deg,#c9933a,#a07020);color:#1a1208;border:none;padding:1rem;font-family:'Cinzel',serif;font-size:1rem;font-weight:600;letter-spacing:0.15em;cursor:pointer;border-radius:4px;text-align:center;text-decoration:none;margin-top:1.5rem;}
+.espacio{height:4rem;}
 </style>
 </head>
 <body>
-
 <div class="header">
-  <a href="mapa.html" class="back">← Volver al mapa</a>
-  <div class="tag">LUGAR III · KM 15 — O PORRIÑO</div>
-  <h1>Castro da Troña</h1>
+<a href="mapa4.html" class="back">← Volver al mapa</a>
+<div class="tag">LUGAR III · KM 15 — O PORRIÑO</div>
+<h1>Castro da Troña</h1>
 </div>
-
 <div class="body">
-  <p class="leyenda">"Los mouros no están muertos. Están esperando. Construyeron lo que no podemos construir y guardaron lo que no sabemos encontrar."</p>
-
-  <p class="texto">En las alturas que dominan O Porriño se alzan los restos del Castro da Troña, un asentamiento galaico de la Edad del Hierro. Pero para la memoria popular, los castros no son ruinas arqueológicas: son las casas de los mouros, seres de antes del tiempo cristiano.<br><br>Se dice que bajo cada castro existe un tesoro guardado por una moura, una mujer encantada que se transforma en serpiente. Solo puede ser liberada por alguien que la bese sin miedo. Nadie lo ha conseguido todavía.</p>
-
-  <!-- RETO 1 -->
-  <div class="reto">
-    <div class="reto-tipo">⚔️ ENIGMA DE LA LEYENDA</div>
-    <p class="reto-pregunta">"Los mouros construyeron en una sola noche lo que los hombres tardan cien años. Su secreto era que trabajaban al revés del tiempo. ¿Qué nombre da la arqueología al pueblo que realmente construyó los castros?"</p>
-    <button class="opcion" onclick="resp(this,false,'f1','No exactamente. La arqueología los llama los galaicos: pueblo prerromano del noroeste.')">Los íberos</button>
-    <button class="opcion" onclick="resp(this,false,'f1','Aunque hay influencia celta, la arqueología los llama específicamente los galaicos.')">Los celtas</button>
-    <button class="opcion" onclick="resp(this,true,'f1','Correcto. Los galaicos: pueblo prerromano del noroeste peninsular, constructores de los castros.')">Los galaicos</button>
-    <div class="fb" id="f1"></div>
-  </div>
-
-  <!-- RETO 2 -->
-  <div class="reto">
-    <div class="reto-tipo">🔀 LA PRUEBA FINAL</div>
-    <p class="reto-pregunta">En la cima del castro encuentras una serpiente enroscada en una piedra. Te mira fijamente. Sabes lo que significa. ¿Qué haces?</p>
-    <button class="opcion" onclick="decision(this,'f2','La serpiente desaparece en un destello dorado. En su lugar queda una moneda antigua con una cara de mujer. La guardas en silencio.')">💋 Te inclinas y la besas — "El miedo no tiene lugar en el Camino"</button>
-    <button class="opcion" onclick="decision(this,'f2','La serpiente se desliza entre las piedras. Por un momento crees oír: &quot;Volveremos a encontrarnos.&quot; Sigues tu camino.')">🙏 La saludas y sigues — "Hay secretos que deben permanecer"</button>
-    <div class="fb" id="f2"></div>
-  </div>
-
-  <!-- RETO 3: FOTO -->
-  <div class="reto">
-    <div class="reto-tipo">📸 RETO DEL PEREGRINO</div>
-    <p class="reto-pregunta">Fotografía una piedra antigua, un muro, o cualquier vestigio de lo que estuvo antes. Todo peregrino debe mirar hacia atrás una vez.</p>
-    <div class="foto-zona" onclick="document.getElementById('fi1').click()">
-      <div style="font-size:2rem">📷</div>
-      <p>Toca para añadir tu foto del Castro</p>
-    </div>
-    <input type="file" id="fi1" accept="image/*" style="display:none" onchange="subirFoto(this,'pv1','fd1')">
-    <img id="pv1" class="foto-prev">
-    <div id="fd1" style="display:none;color:#b8dbb0;margin-top:0.5rem;font-size:0.9rem">✓ Foto guardada en tu álbum</div>
-  </div>
-
-  <button class="btn-completar" onclick="completar()">Completar este lugar 🏰</button>
-
-  <div id="msg-completado" style="display:none;text-align:center;padding:1.5rem;background:rgba(74,103,65,0.2);border:1px solid #6a9760;border-radius:6px;margin-top:1rem;">
-    <div style="font-size:2.5rem;margin-bottom:0.5rem">🏰</div>
-    <div style="font-family:'Cinzel',serif;color:#c9933a;margin-bottom:0.3rem">SELLO OBTENIDO</div>
-    <div style="font-size:1.1rem;margin-bottom:0.5rem">Despertador de Mouros</div>
-    <p style="font-size:0.9rem;color:#d4c49a;font-style:italic;margin-bottom:1rem">"Conoces el secreto de los mouros. Ellos no te olvidarán."</p>
-    <div style="font-family:'Cinzel',serif;color:#c9933a;font-size:0.8rem;margin-bottom:1rem">🎉 ¡ETAPA I COMPLETADA!</div>
-    <a href="mapa.html" class="btn-completar" style="display:inline-block;width:auto;padding:0.8rem 2rem;">Ver mis sellos →</a>
-  </div>
-
-  <div class="espacio"></div>
+<p class="leyenda">"Los mouros no están muertos. Están esperando. Construyeron lo que no podemos construir y guardaron lo que no sabemos encontrar."</p>
+<p class="texto">En las alturas que dominan O Porriño se alzan los restos del Castro da Troña, un asentamiento galaico de la Edad del Hierro. Para la memoria popular, los castros son las casas de los mouros, seres de antes del tiempo cristiano.<br><br>Se dice que bajo cada castro existe un tesoro guardado por una moura que se transforma en serpiente. Solo puede ser liberada por alguien que la bese sin miedo. Nadie lo ha conseguido todavía.</p>
+<div class="reto">
+<div class="reto-tipo">⚔️ ENIGMA DE LA LEYENDA</div>
+<p class="reto-pregunta">¿Qué nombre da la arqueología al pueblo que realmente construyó los castros?</p>
+<button class="opcion" onclick="resp(this,false,'f1','No exactamente. La arqueología los llama los galaicos.')">Los íberos</button>
+<button class="opcion" onclick="resp(this,false,'f1','Aunque hay influencia celta, se llaman específicamente los galaicos.')">Los celtas</button>
+<button class="opcion" onclick="resp(this,true,'f1','Correcto. Los galaicos: pueblo prerromano del noroeste peninsular.')">Los galaicos</button>
+<div class="fb" id="f1"></div>
 </div>
-
+<div class="reto">
+<div class="reto-tipo">🔀 LA PRUEBA FINAL</div>
+<p class="reto-pregunta">En la cima del castro encuentras una serpiente enroscada en una piedra. Te mira fijamente. ¿Qué haces?</p>
+<button class="opcion" onclick="dec(this,'f2','La serpiente desaparece en un destello dorado. En su lugar queda una moneda antigua con una cara de mujer.')">💋 Te inclinas y la besas — "El miedo no tiene lugar en el Camino"</button>
+<button class="opcion" onclick="dec(this,'f2','La serpiente se desliza entre las piedras. Crees oír: Volveremos a encontrarnos.')">🙏 La saludas y sigues — "Hay secretos que deben permanecer"</button>
+<div class="fb" id="f2"></div>
+</div>
+<div class="reto">
+<div class="reto-tipo">📸 RETO DEL PEREGRINO</div>
+<p class="reto-pregunta">Fotografía una piedra antigua, un muro, o cualquier vestigio de lo que estuvo antes.</p>
+<div class="foto-zona" onclick="document.getElementById('fi1').click()">
+<div style="font-size:2rem">📷</div>
+<p>Toca para añadir tu foto del Castro</p>
+</div>
+<input type="file" id="fi1" accept="image/*" style="display:none" onchange="foto(this,'pv1','fd1')">
+<img id="pv1" class="foto-prev">
+<div id="fd1" style="display:none;color:#b8dbb0;margin-top:0.5rem;font-size:0.9rem">✓ Foto guardada en tu álbum</div>
+</div>
+<button class="btn" onclick="completar()">Completar este lugar 🏰</button>
+<div id="done" style="display:none;text-align:center;padding:1.5rem;background:rgba(74,103,65,0.2);border:1px solid #6a9760;border-radius:6px;margin-top:1rem;">
+<div style="font-size:2.5rem;margin-bottom:0.5rem">🏰</div>
+<div style="font-family:'Cinzel',serif;color:#c9933a;margin-bottom:0.3rem">SELLO OBTENIDO</div>
+<div style="font-size:1.1rem;margin-bottom:0.5rem">Despertador de Mouros</div>
+<p style="font-size:0.9rem;color:#d4c49a;font-style:italic;margin-bottom:1rem">"Conoces el secreto de los mouros. Ellos no te olvidarán."</p>
+<div style="font-family:'Cinzel',serif;color:#c9933a;font-size:0.8rem;margin-bottom:1rem">🎉 ¡ETAPA I COMPLETADA!</div>
+<a href="mapa4.html" class="btn" style="display:inline-block;width:auto;padding:0.8rem 2rem;">Ver mis sellos →</a>
+</div>
+<div class="espacio"></div>
+</div>
 <script>
-var respondido = {};
-function resp(btn,ok,fbId,msg){if(respondido[fbId])return;respondido[fbId]=true;btn.parentElement.querySelectorAll('.opcion').forEach(function(b){b.style.pointerEvents='none';});btn.className=ok?'opcion ok':'opcion mal';var fb=document.getElementById(fbId);fb.className=ok?'fb ok':'fb mal';fb.textContent=msg;fb.style.display='block';}
-function decision(btn,fbId,msg){if(respondido[fbId])return;respondido[fbId]=true;btn.parentElement.querySelectorAll('.opcion').forEach(function(b){b.style.pointerEvents='none';});btn.className='opcion ok';var fb=document.getElementById(fbId);fb.className='fb ok';fb.textContent=msg;fb.style.display='block';}
-function subirFoto(input,prevId,doneId){var file=input.files[0];if(!file)return;var reader=new FileReader();reader.onload=function(e){document.getElementById(prevId).src=e.target.result;document.getElementById(prevId).style.display='block';document.getElementById(doneId).style.display='block';};reader.readAsDataURL(file);}
-function completar(){try{var c=JSON.parse(localStorage.getItem('c')||'[]');if(!c.includes(3))c.push(3);localStorage.setItem('c',JSON.stringify(c));}catch(e){}document.querySelector('.btn-completar').style.display='none';document.getElementById('msg-completado').style.display='block';}
+var r={};
+function resp(btn,ok,id,msg){if(r[id])return;r[id]=true;btn.parentElement.querySelectorAll('.opcion').forEach(function(b){b.style.pointerEvents='none';});btn.className=ok?'opcion ok':'opcion mal';var f=document.getElementById(id);f.className=ok?'fb ok':'fb mal';f.textContent=msg;f.style.display='block';}
+function dec(btn,id,msg){if(r[id])return;r[id]=true;btn.parentElement.querySelectorAll('.opcion').forEach(function(b){b.style.pointerEvents='none';});btn.className='opcion ok';var f=document.getElementById(id);f.className='fb ok';f.textContent=msg;f.style.display='block';}
+function foto(input,pv,fd){var file=input.files[0];if(!file)return;var reader=new FileReader();reader.onload=function(e){document.getElementById(pv).src=e.target.result;document.getElementById(pv).style.display='block';document.getElementById(fd).style.display='block';};reader.readAsDataURL(file);}
+function completar(){try{var c=JSON.parse(localStorage.getItem('c')||'[]');if(!c.includes(3))c.push(3);localStorage.setItem('c',JSON.stringify(c));}catch(e){}document.querySelector('.btn').style.display='none';document.getElementById('done').style.display='block';}
 </script>
 </body>
 </html>
