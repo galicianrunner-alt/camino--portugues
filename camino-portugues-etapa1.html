@@ -723,13 +723,13 @@
   <p class="intro-lore">
     "Cruza el río y entrarás en otra tierra. Los que pasan el Miño saben que no volverán siendo los mismos. El agua lo recuerda todo."
   </p>
-  <button class="btn-primary" id="btn-start">Comenzar el Camino</button>
+  <a href="#mapa" class="btn-primary" id="btn-start" style="text-decoration:none;display:inline-block;text-align:center;" onclick="startJourney();return false;">Comenzar el Camino</a>
 </div>
 
 <!-- ═══════════════════
      PANTALLA: MAPA
 ═══════════════════ -->
-<div class="screen" id="screen-map">
+<div class="screen" id="screen-map" style="display:flex;" name="mapa">
   <div class="map-header">
     <h2>Etapa I · 15 km</h2>
     <h3>Tui → O Porriño</h3>
@@ -1180,7 +1180,10 @@ let completedThisLocation = false;
 // ═══════════════════════════════════════
 
 function startJourney() {
-  showScreen('screen-map');
+  document.getElementById('screen-intro').style.display = 'none';
+  document.getElementById('screen-map').style.display = 'flex';
+  document.getElementById('screen-intro').classList.remove('active');
+  document.getElementById('screen-map').classList.add('active');
 }
 
 function showScreen(id) {
