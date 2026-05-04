@@ -23,6 +23,7 @@ h1{font-family:'Cinzel',serif;font-size:1.6rem;color:#f0e6c8;text-align:center;m
 .ln{font-family:'Cinzel',serif;font-size:0.9rem;display:block;margin-bottom:0.2rem;}
 .ls{font-size:0.85rem;color:#8899aa;font-style:italic;}
 .leg{display:flex;gap:1.5rem;justify-content:center;font-size:0.75rem;color:#8899aa;margin-top:1rem;}
+.volver{display:block;text-align:center;color:#c9933a;font-family:'Cinzel',serif;font-size:0.8rem;text-decoration:none;margin-top:2rem;letter-spacing:0.1em;}
 </style>
 </head>
 <body>
@@ -34,6 +35,7 @@ h1{font-family:'Cinzel',serif;font-size:1.6rem;color:#f0e6c8;text-align:center;m
 <a href="lugar2b.html" class="lugar lock" id="l2"><div class="li"><div class="ic" id="i2">🌊</div><div><span class="ln">Río Louro · Las Lavandeiras</span><span class="ls">Donde las lavandeiras trabajan</span></div></div></a>
 <a href="lugar3b.html" class="lugar lock" id="l3"><div class="li"><div class="ic" id="i3">🏰</div><div><span class="ln">O Porriño · Castro da Troña</span><span class="ls">Los mouros aún guardan sus tesoros</span></div></div></a>
 <div class="leg"><span>🟡 Activo</span><span>✅ Completado</span><span>🔒 Bloqueado</span></div>
+<a href="mapa5.html" class="volver" id="sig" style="display:none">Etapa II →</a>
 <script>
 try{
 var c=JSON.parse(localStorage.getItem('c')||'[]');
@@ -43,6 +45,7 @@ if(c.includes(1)){document.getElementById('l1').className='lugar done';document.
 if(c.includes(1)){document.getElementById('l2').className='lugar';}
 if(c.includes(2)){document.getElementById('l2').className='lugar done';document.getElementById('i2').textContent='✓';document.getElementById('l3').className='lugar';}
 if(c.includes(3)){document.getElementById('l3').className='lugar done';document.getElementById('i3').textContent='✓';}
+if(c.length>=3){document.getElementById('sig').style.display='block';}
 }catch(e){}
 </script>
 </body>
