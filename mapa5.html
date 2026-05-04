@@ -35,6 +35,7 @@ h1{font-family:'Cinzel',serif;font-size:1.6rem;color:#f0e6c8;text-align:center;m
 <a href="lugar5b.html" class="lugar lock" id="l2"><div class="li"><div class="ic" id="i2">🌉</div><div><span class="ln">Redondela · El Viaducto</span><span class="ls">El puente que los mouros no pudieron cruzar</span></div></div></a>
 <a href="lugar6b.html" class="lugar lock" id="l3"><div class="li"><div class="ic" id="i3">⚓</div><div><span class="ln">Redondela · La Ría</span><span class="ls">Los galeones arden bajo el agua</span></div></div></a>
 <div class="leg"><span>🟡 Activo</span><span>✅ Completado</span><span>🔒 Bloqueado</span></div>
+<a href="mapa6.html" class="volver" id="sig" style="display:none">Etapa III →</a>
 <a href="mapa4.html" class="volver">← Volver a Etapa I</a>
 <script>
 try{
@@ -45,6 +46,7 @@ if(c.includes(1)){document.getElementById('l1').className='lugar done';document.
 if(c.includes(1)){document.getElementById('l2').className='lugar';}
 if(c.includes(2)){document.getElementById('l2').className='lugar done';document.getElementById('i2').textContent='✓';document.getElementById('l3').className='lugar';}
 if(c.includes(3)){document.getElementById('l3').className='lugar done';document.getElementById('i3').textContent='✓';}
+if(c.length>=3){document.getElementById('sig').style.display='block';}
 }catch(e){}
 </script>
 </body>
