@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Camiño Portugués — Etapa IV</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#1a1208;color:#f0e6c8;font-family:'Crimson Text',Georgia,serif;min-height:100vh;padding:1.5rem;}
+h1{font-family:'Cinzel',serif;font-size:1.6rem;color:#f0e6c8;text-align:center;margin-bottom:0.3rem;}
+.sub{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.3em;color:#c9933a;text-align:center;margin-bottom:2rem;}
+.prog-label{display:flex;justify-content:space-between;font-family:'Cinzel',serif;font-size:0.75rem;color:#8899aa;margin-bottom:0.5rem;}
+.prog-bar{height:4px;background:rgba(255,255,255,0.1);border-radius:2px;margin-bottom:2rem;}
+.prog-fill{height:100%;background:linear-gradient(90deg,#c9933a,#e8b86d);border-radius:2px;}
+.lugar{display:block;text-decoration:none;background:rgba(240,230,200,0.05);border:1px solid rgba(201,147,58,0.3);border-radius:6px;padding:1rem;margin-bottom:1rem;color:#f0e6c8;}
+.lugar.lock{opacity:0.4;pointer-events:none;}
+.lugar.done{border-color:#6a9760;}
+.li{display:flex;align-items:center;gap:1rem;}
+.ic{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#c9933a,#7a5010);border:2px solid #c9933a;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;box-shadow:0 0 15px rgba(201,147,58,0.4);}
+.lugar.lock .ic{background:#2a2318;border-color:#8899aa;box-shadow:none;}
+.lugar.done .ic{background:#4a6741;border-color:#6a9760;box-shadow:none;}
+.ln{font-family:'Cinzel',serif;font-size:0.9rem;display:block;margin-bottom:0.2rem;}
+.ls{font-size:0.85rem;color:#8899aa;font-style:italic;}
+.leg{display:flex;gap:1.5rem;justify-content:center;font-size:0.75rem;color:#8899aa;margin-top:1rem;}
+.volver{display:block;text-align:center;color:#c9933a;font-family:'Cinzel',serif;font-size:0.8rem;text-decoration:none;margin-top:2rem;letter-spacing:0.1em;}
+</style>
+</head>
+<body>
+<h1>Pontevedra → Caldas de Reis</h1>
+<p class="sub">ETAPA IV · 22 KM</p>
+<div class="prog-label"><span>Progreso</span><span id="pt">0 / 3 lugares</span></div>
+<div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+<a href="lugar10b.html" class="lugar" id="l1"><div class="li"><div class="ic" id="i1">💧</div><div><span class="ln">Alba · La Fuente Medicinal</span><span class="ls">La moura que curó a los peregrinos</span></div></div></a>
+<a href="lugar11b.html" class="lugar lock" id="l2"><div class="li"><div class="ic" id="i2">♨️</div><div><span class="ln">Caldas de Reis · Las Termas Romanas</span><span class="ls">El rey que curó a su ejército con agua</span></div></div></a>
+<a href="lugar12b.html" class="lugar lock" id="l3"><div class="li"><div class="ic" id="i3">✝️</div><div><span class="ln">Caldas de Reis · Cruceiro do Home Santo</span><span class="ls">El peregrino que Roma tardó en reconocer</span></div></div></a>
+<div class="leg"><span>🟡 Activo</span><span>✅ Completado</span><span>🔒 Bloqueado</span></div>
+<a href="mapa8.html" class="volver" id="sig" style="display:none">Etapa V →</a>
+<a href="mapa6.html" class="volver">← Volver a Etapa III</a>
+<script>
+try{
+var c=JSON.parse(localStorage.getItem('c4')||'[]');
+document.getElementById('pf').style.width=(c.length/3*100)+'%';
+document.getElementById('pt').textContent=c.length+' / 3 lugares';
+if(c.includes(1)){document.getElementById('l1').className='lugar done';document.getElementById('i1').textContent='✓';}
+if(c.includes(1)){document.getElementById('l2').className='lugar';}
+if(c.includes(2)){document.getElementById('l2').className='lugar done';document.getElementById('i2').textContent='✓';document.getElementById('l3').className='lugar';}
+if(c.includes(3)){document.getElementById('l3').className='lugar done';document.getElementById('i3').textContent='✓';}
+if(c.length>=3){document.getElementById('sig').style.display='block';}
+}catch(e){}
+</script>
+</body>
+</html>
