@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Camiño Portugués</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:linear-gradient(170deg,#1a3a6e 0%,#0d2550 45%,#0a1e45 100%);color:#f0e6c8;font-family:'IM Fell English',Georgia,serif;min-height:100vh;padding:2rem 1.5rem;}
+
+.borde-ext{position:fixed;inset:7px;border:1px solid rgba(201,168,76,0.15);pointer-events:none;z-index:100;}
+.borde-int{position:fixed;inset:12px;border:1px solid rgba(255,224,112,0.25);pointer-events:none;z-index:100;}
+.esquina{position:fixed;width:24px;height:24px;border-color:#FFE070;border-style:solid;z-index:101;pointer-events:none;}
+.tl{top:15px;left:15px;border-width:2px 0 0 2px;}
+.tr{top:15px;right:15px;border-width:2px 2px 0 0;}
+.bl{bottom:15px;left:15px;border-width:0 0 2px 2px;}
+.br{bottom:15px;right:15px;border-width:0 2px 2px 0;}
+
+.contenido{max-width:480px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:0;}
+
+.simbolo{font-size:3rem;text-align:center;margin-bottom:0.5rem;opacity:0.9;}
+
+.supertitulo{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.4em;color:rgba(255,224,112,0.6);text-transform:uppercase;text-align:center;margin-bottom:0.8rem;}
+
+h1{font-family:'Cinzel Decorative',serif;font-size:2rem;font-weight:700;color:#FFE070;text-align:center;line-height:1.2;margin-bottom:0.3rem;text-shadow:0 0 30px rgba(255,224,112,0.3);}
+
+.subtitulo{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.35em;color:rgba(255,255,255,0.5);text-align:center;text-transform:uppercase;margin-bottom:1.5rem;}
+
+.divisor{width:100%;display:flex;align-items:center;gap:8px;margin:0.8rem 0;}
+.dl{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(255,224,112,0.4),transparent);}
+.dd{width:5px;height:5px;background:#FFE070;transform:rotate(45deg);flex-shrink:0;}
+
+.intro{background:rgba(0,0,0,0.25);border:1px solid rgba(255,224,112,0.2);border-left:3px solid #FFE070;padding:1.2rem 1.2rem;margin-bottom:1.5rem;width:100%;}
+.intro p{font-family:'IM Fell English',serif;font-size:1rem;line-height:1.8;color:rgba(255,255,255,0.8);font-style:italic;}
+.intro p+p{margin-top:0.8rem;}
+
+.etapas-titulo{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.35em;color:rgba(255,224,112,0.7);text-transform:uppercase;text-align:center;margin-bottom:1rem;}
+
+.etapas{width:100%;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem;}
+
+.etapa{display:block;text-decoration:none;background:rgba(255,255,255,0.04);border:1px solid rgba(255,224,112,0.2);padding:0.9rem 1.1rem;color:#f0e6c8;transition:border-color 0.2s;}
+.etapa:active{border-color:rgba(255,224,112,0.6);}
+.etapa-row{display:flex;align-items:center;gap:0.8rem;}
+.etapa-num{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.2em;color:rgba(255,224,112,0.5);min-width:60px;}
+.etapa-info{flex:1;}
+.etapa-nombre{font-family:'Cinzel',serif;font-size:0.85rem;color:#FFE070;display:block;margin-bottom:0.15rem;}
+.etapa-tramo{font-family:'IM Fell English',serif;font-size:0.85rem;color:rgba(255,255,255,0.5);font-style:italic;}
+.etapa-flecha{color:rgba(255,224,112,0.4);font-size:0.8rem;}
+
+.leyenda-zona{width:100%;text-align:center;margin-bottom:1.5rem;}
+.leyenda-zona p{font-family:'IM Fell English',serif;font-size:0.9rem;color:rgba(255,255,255,0.35);font-style:italic;line-height:1.7;}
+
+.pie{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.25em;color:rgba(201,168,76,0.3);text-align:center;text-transform:uppercase;padding-bottom:2rem;}
+</style>
+</head>
+<body>
+
+<div class="borde-ext"></div>
+<div class="borde-int"></div>
+<div class="esquina tl"></div>
+<div class="esquina tr"></div>
+<div class="esquina bl"></div>
+<div class="esquina br"></div>
+
+<div class="contenido">
+
+  <div class="simbolo">🐚</div>
+
+  <p class="supertitulo">Tui · Santiago de Compostela</p>
+
+  <h1>O Camiño<br>Portugués</h1>
+
+  <p class="subtitulo">El juego del peregrino</p>
+
+  <div class="divisor"><div class="dl"></div><div class="dd"></div><div class="dl"></div></div>
+
+  <div class="intro">
+    <p>Galicia es tierra de antiguas memorias. Bajo cada piedra del Camino duerme una leyenda. En cada río, en cada castro, en cada cruceiro, late algo que existía antes que los nombres.</p>
+    <p>Este no es un juego. Es un viaje al interior de un territorio que respira magia, tradición y espiritualidad desde hace mil años. Recórrelo. Escucha lo que las piedras tienen que decirte.</p>
+  </div>
+
+  <div class="divisor"><div class="dl"></div><div class="dd"></div><div class="dl"></div></div>
+
+  <p class="etapas-titulo">Elige tu etapa</p>
+
+  <div class="etapas">
+    <a href="mapa4.html" class="etapa">
+      <div class="etapa-row">
+        <span class="etapa-num">Etapa I</span>
+        <div class="etapa-info">
+          <span class="etapa-nombre">Tui → O Porriño</span>
+          <span class="etapa-tramo">15 km · El umbral del Camino</span>
+        </div>
+        <span class="etapa-flecha">›</span>
+      </div>
+    </a>
+    <a href="mapa5.html" class="etapa">
+      <div class="etapa-row">
+        <span class="etapa-num">Etapa II</span>
+        <div class="etapa-info">
+          <span class="etapa-nombre">O Porriño → Redondela</span>
+          <span class="etapa-tramo">15 km · Los galeones y las encrucijadas</span>
+        </div>
+        <span class="etapa-flecha">›</span>
+      </div>
+    </a>
+    <a href="mapa6.html" class="etapa">
+      <div class="etapa-row">
+        <span class="etapa-num">Etapa III</span>
+        <div class="etapa-info">
+          <span class="etapa-nombre">Redondela → Pontevedra</span>
+          <span class="etapa-tramo">20 km · Colón y las ruinas del tiempo</span>
+        </div>
+        <span class="etapa-flecha">›</span>
+      </div>
+    </a>
+    <a href="mapa7.html" class="etapa">
+      <div class="etapa-row">
+        <span class="etapa-num">Etapa IV</span>
+        <div class="etapa-info">
+          <span class="etapa-nombre">Pontevedra → Caldas de Reis</span>
+          <span class="etapa-tramo">22 km · Las aguas que curan</span>
+        </div>
+        <span class="etapa-flecha">›</span>
+      </div>
+    </a>
+    <a href="mapa8.html" class="etapa" style="opacity:0.3;pointer-events:none;">
+      <div class="etapa-row">
+        <span class="etapa-num">Etapa V</span>
+        <div class="etapa-info">
+          <span class="etapa-nombre">Caldas de Reis → Padrón</span>
+          <span class="etapa-tramo">Próximamente</span>
+        </div>
+        <span class="etapa-flecha">›</span>
+      </div>
+    </a>
+    <a href="mapa9.html" class="etapa" style="opacity:0.3;pointer-events:none;">
+      <div class="etapa-row">
+        <span class="etapa-num">Etapa VI</span>
+        <div class="etapa-info">
+          <span class="etapa-nombre">Padrón → Santiago</span>
+          <span class="etapa-tramo">Próximamente</span>
+        </div>
+        <span class="etapa-flecha">›</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="divisor"><div class="dl"></div><div class="dd"></div><div class="dl"></div></div>
+
+  <div class="leyenda-zona">
+    <p>"El Camino no termina en Santiago.<br>Termina cuando entiendes por qué lo empezaste."</p>
+  </div>
+
+  <p class="pie">O Camiño Portugués · Tui · Santiago de Compostela</p>
+
+</div>
+</body>
+</html>
