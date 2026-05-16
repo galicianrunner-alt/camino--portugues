@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arcade · El Puente Romano</title>
+<title>Pontevedra · La Leyenda de Colón</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="manifest" href="/camino--portugues/manifest.json">
 <meta name="theme-color" content="#c8a96e">
@@ -19,7 +19,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#0d0a05;color:#f0e6c8;font-family:'Crimson Text',Georgia,serif;min-height:100vh;}
-.header{padding:1.5rem;background:rgba(60,40,10,0.4);border-bottom:1px solid rgba(201,147,58,0.2);}
+.header{padding:1.5rem;background:rgba(20,40,60,0.4);border-bottom:1px solid rgba(201,147,58,0.2);}
 .back{display:inline-block;color:#c9933a;font-family:'Cinzel',serif;font-size:0.8rem;letter-spacing:0.1em;text-decoration:none;margin-bottom:1rem;}
 .tag{font-size:0.75rem;letter-spacing:0.25em;color:#c9933a;font-family:'Cinzel',serif;margin-bottom:0.4rem;}
 h1{font-family:'Cinzel',serif;font-size:1.5rem;color:#f0e6c8;}
@@ -45,45 +45,44 @@ h1{font-family:'Cinzel',serif;font-size:1.5rem;color:#f0e6c8;}
 <body>
 <div class="header">
 <a href="mapa6.html" class="back">← Volver al mapa</a>
-<div class="tag">LUGAR I · KM 5 — ARCADE</div>
-<h1>El Puente Romano</h1>
+<div class="tag">LUGAR II · KM 15 — PONTEVEDRA</div>
+<h1>La Leyenda de Colón</h1>
 </div>
 <div class="body">
-<p class="leyenda">"Dos mil años de pasos sobre el mismo arco. El puente no recuerda a los que lo cruzaron — los lleva dentro."</p>
-<p class="texto">El puente medieval de Arcade sobre el río Verdugo es uno de los más antiguos del Camino. Construido sobre cimientos romanos, ha visto pasar legiones, peregrinos, ejércitos y fugitivos durante veinte siglos.<br><br>La tradición dice que el río Verdugo tiene memoria propia. Que si pones el oído sobre la piedra del puente puedes escuchar el eco de todos los que cruzaron antes. Los peregrinos medievales lo llamaban el puente que habla.</p>
+<p class="leyenda">"El almirante que cambió el mundo nunca dijo de dónde venía. Quizás porque venía de aquí, y nadie le habría creído."</p>
+<p class="texto">Pontevedra guarda uno de los secretos más inquietantes del Camino: la teoría de que Cristóbal Colón era gallego, nacido en esta ciudad como Cristóbal Colón de Pontevedra, hijo de un corsario local.<br><br>Los defensores de esta teoría señalan que Colón hablaba gallego-portugués como lengua materna, que conocía estas costas mejor que cualquier genovés, y que su escudo de armas incluye castillos y leones — los símbolos de Galicia y Castilla. La historia oficial dice que nació en Génova. Pontevedra dice que no.</p>
 <div class="reto">
-<div class="reto-tipo">⚔️ ENIGMA DE LA LEYENDA</div>
-<p class="reto-pregunta">El puente de Arcade cruza el río Verdugo. ¿Qué significa "verdugo" en la tradición popular gallega relacionada con los ríos?</p>
-<button class="opcion" onclick="resp(this,false,'f1','No exactamente. En la tradición gallega, verdugo hace referencia a una vara o rama flexible usada para atar — el río que todo lo enlaza.')">El río de los ahogados</button>
-<button class="opcion" onclick="resp(this,true,'f1','Correcto. El verdugo es la vara que ata. El río Verdugo enlaza dos orillas, dos mundos, dos tiempos.')">La vara que enlaza y ata</button>
-<button class="opcion" onclick="resp(this,false,'f1','No es eso. Verdugo viene de una vara flexible que enlaza — el río que une las dos orillas.')">El guardián del bosque</button>
+<div class="reto-tipo">🗺️ ENIGMA DEL ALMIRANTE</div>
+<p class="reto-pregunta">Según la teoría pontevedresa, ¿cuál era el verdadero apellido familiar de Colón antes de cambiar su identidad?</p>
+<button class="opcion" onclick="resp(this,false,'f1','No es ese. La teoría pontevedresa dice que su apellido era Fonterosa.')">Colón de Gálvez</button>
+<button class="opcion" onclick="resp(this,true,'f1','Correcto. Según esta teoría, era hijo de Domingo de Colón y Suzana Fonterosa, familia de Pontevedra.')">Fonterosa</button>
+<button class="opcion" onclick="resp(this,false,'f1','No exactamente. La teoría local dice Fonterosa, no Colombo.')">Colombo</button>
 <div class="fb" id="f1"></div>
 </div>
 <div class="reto">
 <div class="reto-tipo">🔀 DECISIÓN DEL PEREGRINO</div>
-<p class="reto-pregunta">A mitad del puente te detienes. Pones la mano sobre la piedra. ¿Qué crees escuchar?</p>
-<button class="opcion" onclick="dec(this,'f2','El agua. Siempre el agua. Pero hoy suena diferente — más profunda, más antigua.')">🌊 El agua del río</button>
-<button class="opcion" onclick="dec(this,'f2','Pasos. Miles de pasos superpuestos. El eco de todos los que cruzaron antes que tú.')">👣 Pasos de otros peregrinos</button>
-<button class="opcion" onclick="dec(this,'f2','Silencio. Pero un silencio que pesa, que tiene forma, que te dice que estás en el lugar correcto.')">🤫 Nada. Solo silencio</button>
+<p class="reto-pregunta">Un guía local te ofrece dos versiones de la historia de Colón: la oficial genovesa y la pontevedresa. ¿Cuál escuchas?</p>
+<button class="opcion" onclick="dec(this,'f2','La historia oficial tiene sus razones. Pero mientras escuchas, algo en Pontevedra te parece familiar, como si ya hubieras estado aquí.')">📜 La versión oficial — "La historia tiene sus razones"</button>
+<button class="opcion" onclick="dec(this,'f2','La versión local tiene más preguntas que respuestas. Pero las preguntas son más interesantes que las certezas.')">🏘️ La versión pontevedresa — "Quiero escuchar lo que no está en los libros"</button>
 <div class="fb" id="f2"></div>
 </div>
 <div class="reto">
 <div class="reto-tipo">📸 RETO DEL PEREGRINO</div>
-<p class="reto-pregunta">Fotografía el puente, el río, o cualquier piedra que te parezca más vieja que tú.</p>
+<p class="reto-pregunta">Fotografía algo de Pontevedra que te parezca capaz de guardar un secreto durante siglos.</p>
 <div class="foto-zona" onclick="document.getElementById('fi1').click()">
 <div style="font-size:2rem">📷</div>
-<p>Toca para añadir tu foto del Puente Romano</p>
+<p>Toca para añadir tu foto de Pontevedra</p>
 </div>
 <input type="file" id="fi1" accept="image/*" style="display:none" onchange="foto(this,'pv1','fd1')">
 <img id="pv1" class="foto-prev">
 <div id="fd1" style="display:none;color:#b8dbb0;margin-top:0.5rem;font-size:0.9rem">✓ Foto guardada en tu álbum</div>
 </div>
-<button class="btn" onclick="completar()">Completar este lugar 🏛️</button>
+<button class="btn" onclick="completar()">Completar este lugar 🗺️</button>
 <div id="done" style="display:none;text-align:center;padding:1.5rem;background:rgba(74,103,65,0.2);border:1px solid #6a9760;border-radius:6px;margin-top:1rem;">
-<div style="font-size:2.5rem;margin-bottom:0.5rem">🏛️</div>
+<div style="font-size:2.5rem;margin-bottom:0.5rem">🗺️</div>
 <div style="font-family:'Cinzel',serif;color:#c9933a;margin-bottom:0.3rem">SELLO OBTENIDO</div>
-<div style="font-size:1.1rem;margin-bottom:0.5rem">Oyente de Piedras</div>
-<p style="font-size:0.9rem;color:#d4c49a;font-style:italic;margin-bottom:1rem">"Pusiste la mano sobre dos mil años. Eso no se olvida."</p>
+<div style="font-size:1.1rem;margin-bottom:0.5rem">Guardián del Secreto</div>
+<p style="font-size:0.9rem;color:#d4c49a;font-style:italic;margin-bottom:1rem">"Conoces la duda. Y la duda es el principio de todo descubrimiento."</p>
 <a href="mapa6.html" class="btn" style="display:inline-block;width:auto;padding:0.8rem 2rem;">Continuar el Camino →</a>
 </div>
 <div class="espacio"></div>
@@ -93,7 +92,7 @@ var r={};
 function resp(btn,ok,id,msg){if(r[id])return;r[id]=true;btn.parentElement.querySelectorAll('.opcion').forEach(function(b){b.style.pointerEvents='none';});btn.className=ok?'opcion ok':'opcion mal';var f=document.getElementById(id);f.className=ok?'fb ok':'fb mal';f.textContent=msg;f.style.display='block';}
 function dec(btn,id,msg){if(r[id])return;r[id]=true;btn.parentElement.querySelectorAll('.opcion').forEach(function(b){b.style.pointerEvents='none';});btn.className='opcion ok';var f=document.getElementById(id);f.className='fb ok';f.textContent=msg;f.style.display='block';}
 function foto(input,pv,fd){var file=input.files[0];if(!file)return;var reader=new FileReader();reader.onload=function(e){document.getElementById(pv).src=e.target.result;document.getElementById(pv).style.display='block';document.getElementById(fd).style.display='block';};reader.readAsDataURL(file);}
-function completar(){try{var c=JSON.parse(localStorage.getItem('c3')||'[]');if(!c.includes(1))c.push(1);localStorage.setItem('c3',JSON.stringify(c));}catch(e){}document.querySelector('.btn').style.display='none';document.getElementById('done').style.display='block';}
+function completar(){try{var c=JSON.parse(localStorage.getItem('c3')||'[]');if(!c.includes(2))c.push(2);localStorage.setItem('c3',JSON.stringify(c));}catch(e){}document.querySelector('.btn').style.display='none';document.getElementById('done').style.display='block';}
 </script>
 </body>
 </html>
