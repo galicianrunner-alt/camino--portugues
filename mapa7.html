@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>O Camiño Portugués — Etapa IV</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="manifest" href="/camino--portugues/manifest.json">
+<meta name="theme-color" content="#c8a96e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="O Camiño">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/camino--portugues/sw.js');
+    });
+  }
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#1a1208;color:#f0e6c8;font-family:'Crimson Text',Georgia,serif;min-height:100vh;padding:1.5rem;}
