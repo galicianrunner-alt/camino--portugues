@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<link rel="manifest" href="/camino--portugues/manifest.json">
+<meta name="theme-color" content="#c8a96e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="O Camiño">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/camino--portugues/sw.js');
+    });
+  }
+</script>
+  <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>O Camiño Portugués</title>
@@ -55,7 +66,42 @@ h1{font-family:'Cinzel Decorative',serif;font-size:2rem;font-weight:700;color:#F
 </style>
 </head>
 <body>
+<div id="banner-instalar" style="display:none; background:#c8a96e; color:#1a1a2e;
+     padding:12px 16px; text-align:center; font-family:Georgia,serif;
+     font-size:14px; position:sticky; top:0; z-index:999;">
+  🐚 Instala O Camiño para jugarlo sin conexión en el Camino
+  <button onclick="instalarApp()" style="margin-left:12px; background:#1a1a2e;
+          color:#c8a96e; border:none; padding:6px 14px; border-radius:20px;
+          cursor:pointer; font-family:Georgia,serif;">Instalar</button>
+  <button onclick="document.getElementById('banner-instalar').style.display='none'"
+          style="margin-left:8px; background:transparent; border:none;
+          color:#1a1a2e; cursor:pointer; font-size:16px;">✕</button>
+</div>
 
+<script>
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.getElementById('banner-instalar').style.display = 'block';
+  });
+
+  function instalarApp() {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(resultado => {
+        if (resultado.outcome === 'accepted') {
+          document.getElementById('banner-instalar').style.display = 'none';
+        }
+        deferredPrompt = null;
+      });
+    }
+  }
+
+  window.addEventListener('appinstalled', () => {
+    document.getElementById('banner-instalar').style.display = 'none';
+  });
+</script>
 <div class="borde-ext"></div>
 <div class="borde-int"></div>
 <div class="esquina tl"></div>
